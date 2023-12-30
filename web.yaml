@@ -12,7 +12,7 @@
       path: /usr/share/nginx/html
       state: absent
 
-  - name: deleting html directory
+  - name: creating html directory
     ansible.builtin.file:
       path: /usr/share/nginx/html
       state: directory
@@ -33,7 +33,7 @@
       src: roboshop.conf
       dest: /etc/nginx/default.d/roboshop.conf
 
-  - name: enable and start nginx
+  - name: start and enable nginx
     ansible.builtin.service:
       name: nginx
       state: restarted
