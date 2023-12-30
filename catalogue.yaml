@@ -42,7 +42,7 @@
 
   - name: copy catalogue service
     ansible.builtin.copy:
-      src: /catalogue.service
+      src: catalogue.service
       dest: /etc/systemd/system/catalogue.service
 
   - name: reloading daemon
