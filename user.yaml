@@ -68,7 +68,7 @@
   #     msg: "product count: {{user_count}}"    
 
   - name: loading schema
-    ansible.builtin.command: mongo --host mongodb.mydevopss.online </app/schema/user.js
+    ansible.builtin.command: mongo --host mongodb.mydevopss.online < /app/schema/user.js
     when: user_count.stdout == "0"
 
   - name: enable and start
